@@ -3,9 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
 
-void main() {
+void main() async {
   ///这里的CustomFlutterBinding调用务必不可缺少，用于控制Boost状态的resume和pause
   CustomFlutterBinding();
+  await EasyLocalization.ensureInitialized();
 
   final List<Locale> supportedLocales = [
     const Locale('en'),
